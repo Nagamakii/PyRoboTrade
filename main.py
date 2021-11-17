@@ -8,4 +8,7 @@ import requests as rq
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv
+
+API = os.getenv("TEST")
+print(API)
