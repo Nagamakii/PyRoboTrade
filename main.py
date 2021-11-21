@@ -21,5 +21,20 @@ api = tradeapi.REST(
     secret_key=secret_id,
     base_url=base_url,
 )
-spy_quote = api.get_latest_quote('SPY')
-print(spy_quote)
+
+def place_buy():
+    api.submit_order(
+        symbol='AAPL',
+        qty=1,
+        type='market',
+        side='buy',
+        time_in_force='day',
+    )
+def place_sell():
+    api.submit_order(
+        symbol='AAPL',
+        qty=1,
+        type='market',
+        side='sell',
+        time_in_force='day',
+    )
